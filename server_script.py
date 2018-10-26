@@ -2,6 +2,7 @@
 import shutil
 import os
 import signal
+import subprocess
 
 home_path = os.getenv("HOME")
 PID_val = 0
@@ -32,5 +33,7 @@ shutil.copy2("/var/lib/jenkins/workspace/Python-Script/app.py", home_path + "/in
 shutil.copytree("/var/lib/jenkins/workspace/Python-Script/public", home_path + "/install/public")
 
 os.system("chmod +x " + home_path + "/install/app.py")
-os.system(home_path + "/install/app.py &")
+#os.system(home_path + "/install/app.py &")
+proc = subprocess.Popen(home_path + "/install/app.py")
+print(proc.pid)
 os.system("disown")
