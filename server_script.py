@@ -37,5 +37,7 @@ shutil.copy2("/var/lib/jenkins/workspace/Python-Script/app.py", home_path + "/in
 shutil.copytree("/var/lib/jenkins/workspace/Python-Script/public", home_path + "/install/public")
 
 os.system("sudo chmod +x ~/install/app.py")
-os.system("sudo ~/install/app.py &")
+os.system("sudo chmod g+s ~/install/app.py")
+os.system("sudo chmod a+w ~/install/public/info.json")
+os.system("~/install/app.py &")
 os.system("disown")
