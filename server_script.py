@@ -16,11 +16,6 @@ except IOError as error:
 	print("1")
 
 try:
-	os.remove(home_path + "/PID")
-except:
-	print("2")
-
-try:
 	os.kill(pid_int, signal.SIGTERM)
 except:
 	print("3")
