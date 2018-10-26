@@ -1,7 +1,6 @@
 #!/usr/bin/python
 import shutil
 import os
-<<<<<<< HEAD
 import signal
 
 home_path = os.getenv("HOME")
@@ -39,12 +38,3 @@ shutil.copytree("/var/lib/jenkins/workspace/Python-Script/public", home_path + "
 
 os.system("~/install/app.py &")
 os.system("disown")
-=======
-#dirame = 'git-folder'
-print("Hello")
-#try:
-#    os.mkdir(dirName)
-#    print("Directory " , dirName ,  " Created ") 
-#except FileExistsError:
-#    print("Directory " , dirName ,  " already exists")
->>>>>>> 15c55c0f2218fd85a867ca98d94c68aa00b038d7
